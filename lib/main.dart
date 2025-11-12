@@ -12,20 +12,45 @@ class SmartSalesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Paleta: azul mate (solo azul y blanco)
+  const Color matteBlue = Color(0xFF2F4F6F); // azul mate
+    const Color whiteColor = Color(0xFFFFFFFF);
+
     return MaterialApp(
       title: 'SmartSales365',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
+        colorScheme: ColorScheme(
           brightness: Brightness.light,
+          primary: matteBlue,
+          onPrimary: whiteColor,
+          secondary: matteBlue,
+          onSecondary: whiteColor,
+          error: Colors.red,
+          onError: whiteColor,
+          background: whiteColor,
+          onBackground: matteBlue,
+          surface: whiteColor,
+          onSurface: matteBlue,
         ),
+        primaryColor: matteBlue,
+        scaffoldBackgroundColor: whiteColor,
         useMaterial3: true,
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           elevation: 0,
           centerTitle: true,
-          backgroundColor: Colors.deepPurple.shade700,
-          foregroundColor: Colors.white,
+          backgroundColor: matteBlue,
+          foregroundColor: whiteColor,
+        ),
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: matteBlue,
+          foregroundColor: whiteColor,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: matteBlue,
+            foregroundColor: whiteColor,
+          ),
         ),
       ),
       home: const SplashScreen(),

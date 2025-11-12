@@ -5,6 +5,7 @@ import '../models/user_model.dart';
 import '../services/ia_api_service.dart';
 import '../services/voice_service.dart';
 import '../services/auth_service.dart';
+import '../theme.dart';
 
 /// Pantalla principal de consulta IA con reconocimiento de voz
 /// Implementación completa según documentación del backend
@@ -286,7 +287,7 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
             icon: const Icon(Icons.open_in_new),
             label: const Text('Abrir Archivo'),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.deepPurple.shade700,
+              backgroundColor: AppColors.matteBlue700,
               foregroundColor: Colors.white,
             ),
           ),
@@ -341,7 +342,7 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
               }
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.deepPurple.shade700,
+              backgroundColor: AppColors.matteBlue700,
             ),
             child: const Text('Consultar'),
           ),
@@ -371,7 +372,7 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
             ),
           ],
         ),
-        backgroundColor: Colors.deepPurple.shade700,
+  backgroundColor: AppColors.matteBlue700,
         foregroundColor: Colors.white,
         elevation: 0,
         actions: [
@@ -387,7 +388,7 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Colors.deepPurple.shade700, Colors.deepPurple.shade50],
+            colors: [AppColors.matteBlue700, AppColors.matteBlue50],
             stops: const [0.0, 0.3],
           ),
         ),
@@ -594,7 +595,7 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
-                color: Colors.deepPurple.shade300,
+                color: AppColors.matteBlue300,
                 width: 2,
               ),
             ),
@@ -612,13 +613,13 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
                     children: [
                       Icon(
                         Icons.keyboard_rounded,
-                        color: Colors.deepPurple.shade600,
+                        color: AppColors.matteBlue600,
                       ),
                       const SizedBox(width: 12),
                       Text(
                         'O escribe tu consulta',
                         style: TextStyle(
-                          color: Colors.deepPurple.shade600,
+                          color: AppColors.matteBlue600,
                           fontWeight: FontWeight.w600,
                           fontSize: 15,
                         ),
@@ -652,7 +653,7 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
       animation: _pulseController,
       builder: (context, child) {
         final isActive = _isListening;
-        final baseColor = isActive ? Colors.red : Colors.deepPurple;
+  final baseColor = isActive ? Colors.red : AppColors.matteBlue;
         final glowIntensity = 0.4 + (_pulseController.value * 0.3);
 
         return GestureDetector(
@@ -684,7 +685,7 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
                 gradient: LinearGradient(
                   colors: isActive
                       ? [Colors.red.shade400, Colors.red.shade700]
-                      : [Colors.deepPurple.shade400, Colors.deepPurple.shade700],
+                      : [AppColors.matteBlue400, AppColors.matteBlue700],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
@@ -766,7 +767,7 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
               Icon(
                 Icons.lightbulb_outline,
                 size: 20,
-                color: Colors.deepPurple.shade700,
+                color: AppColors.matteBlue700,
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -813,7 +814,7 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
             children: [
               Row(
                 children: [
-                  const Icon(Icons.analytics, color: Colors.deepPurple),
+                  const Icon(Icons.analytics, color: AppColors.matteBlue),
                   const SizedBox(width: 8),
                   Expanded(
                     child: Text(
@@ -856,8 +857,8 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
                       label: Text(
                         'Agrupado por: ${interpretacion['agrupar_por'].join(", ")}',
                       ),
-                      backgroundColor: Colors.purple.shade50,
-                      labelStyle: TextStyle(color: Colors.purple.shade700),
+                      backgroundColor: AppColors.matteBlue50,
+                      labelStyle: TextStyle(color: AppColors.matteBlue700),
                     ),
                 ],
               ),
@@ -880,7 +881,7 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
                     child: SingleChildScrollView(
                       child: DataTable(
                         headingRowColor: WidgetStateProperty.all(
-                          Colors.deepPurple.shade50,
+                          AppColors.matteBlue50,
                         ),
                         columns: columnas
                             .map(
@@ -889,7 +890,7 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
                                   col.toString().toUpperCase(),
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.deepPurple.shade700,
+                                    color: AppColors.matteBlue700,
                                   ),
                                 ),
                               ),
@@ -958,7 +959,7 @@ class _IAVoiceScreenState extends State<IAVoiceScreen>
       builder: (context) => AlertDialog(
         title: const Row(
           children: [
-            Icon(Icons.help, color: Colors.deepPurple),
+            Icon(Icons.help, color: AppColors.matteBlue),
             SizedBox(width: 12),
             Text('Ayuda'),
           ],

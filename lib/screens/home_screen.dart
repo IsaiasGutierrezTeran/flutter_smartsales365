@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/user_model.dart';
 import '../services/auth_service.dart';
+import '../theme.dart';
 import 'login_screen.dart';
 import 'ia_voice_screen.dart';
 
@@ -60,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: Row(
           children: [
-            Icon(Icons.logout, color: Colors.deepPurple.shade700),
+            Icon(Icons.logout, color: AppColors.matteBlue700),
             const SizedBox(width: 12),
             const Text('Cerrar Sesión'),
           ],
@@ -104,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             expandedHeight: 200,
             floating: false,
             pinned: true,
-            backgroundColor: Colors.deepPurple.shade700,
+            backgroundColor: AppColors.matteBlue700,
             flexibleSpace: FlexibleSpaceBar(
               title: const Text(
                 'SmartSales365',
@@ -124,10 +125,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
-                    colors: [
-                      Colors.deepPurple.shade700,
-                      Colors.purple.shade500,
-                    ],
+                      colors: [
+                        AppColors.matteBlue700,
+                        AppColors.matteBlue600,
+                      ],
                   ),
                 ),
                 child: Stack(
@@ -180,9 +181,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           height: 24,
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
-                              colors: [
-                                Colors.deepPurple.shade700,
-                                Colors.purple.shade500,
+                                colors: [
+                                AppColors.matteBlue700,
+                                AppColors.matteBlue600,
                               ],
                             ),
                             borderRadius: BorderRadius.circular(2),
@@ -223,13 +224,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           end: Alignment.bottomRight,
           colors: [
             Colors.white,
-            Colors.deepPurple.shade50,
+            AppColors.matteBlue50,
           ],
         ),
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: Colors.deepPurple.withOpacity(0.15),
+            color: AppColors.matteBlue.withOpacity(0.15),
             blurRadius: 20,
             offset: const Offset(0, 10),
           ),
@@ -245,15 +246,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               height: 70,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [
-                    Colors.deepPurple.shade600,
-                    Colors.purple.shade400,
+                    colors: [
+                    AppColors.matteBlue600,
+                    AppColors.matteBlue400,
                   ],
                 ),
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.deepPurple.withOpacity(0.4),
+                    color: AppColors.matteBlue.withOpacity(0.4),
                     blurRadius: 15,
                     offset: const Offset(0, 5),
                   ),

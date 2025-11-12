@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme.dart';
 import '../services/auth_service.dart';
 import 'home_screen.dart';
 
@@ -109,9 +110,9 @@ class _LoginScreenState extends State<LoginScreen>
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Colors.deepPurple.shade700,
-              Colors.deepPurple.shade500,
-              Colors.purple.shade400,
+              AppColors.matteBlue700,
+              AppColors.matteBlue600,
+              AppColors.matteBlue400,
             ],
           ),
         ),
@@ -150,14 +151,14 @@ class _LoginScreenState extends State<LoginScreen>
                                     decoration: BoxDecoration(
                                       gradient: LinearGradient(
                                         colors: [
-                                          Colors.deepPurple.shade400,
-                                          Colors.purple.shade600,
+                                          AppColors.matteBlue400,
+                                          AppColors.matteBlue600,
                                         ],
                                       ),
                                       shape: BoxShape.circle,
                                       boxShadow: [
                                         BoxShadow(
-                                          color: Colors.deepPurple.withOpacity(0.4),
+                                          color: AppColors.matteBlue.withOpacity(0.4),
                                           blurRadius: 20,
                                           spreadRadius: 5,
                                         ),
@@ -177,8 +178,8 @@ class _LoginScreenState extends State<LoginScreen>
                             ShaderMask(
                               shaderCallback: (bounds) => LinearGradient(
                                 colors: [
-                                  Colors.deepPurple.shade700,
-                                  Colors.purple.shade500,
+                                  AppColors.matteBlue700,
+                                  AppColors.matteBlue600,
                                 ],
                               ).createShader(bounds),
                               child: const Text(
@@ -209,7 +210,7 @@ class _LoginScreenState extends State<LoginScreen>
                                 hintText: 'admin',
                                 prefixIcon: Icon(
                                   Icons.person_outline,
-                                  color: Colors.deepPurple.shade400,
+                                  color: AppColors.matteBlue400,
                                 ),
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(16),
@@ -225,8 +226,8 @@ class _LoginScreenState extends State<LoginScreen>
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(
-                                    color: Colors.deepPurple.shade400,
+                                    borderSide: BorderSide(
+                                    color: AppColors.matteBlue400,
                                     width: 2,
                                   ),
                                 ),
@@ -253,7 +254,7 @@ class _LoginScreenState extends State<LoginScreen>
                                 hintText: '••••••••',
                                 prefixIcon: Icon(
                                   Icons.lock_outline,
-                                  color: Colors.deepPurple.shade400,
+                                  color: AppColors.matteBlue400,
                                 ),
                                 suffixIcon: IconButton(
                                   icon: Icon(
@@ -283,7 +284,7 @@ class _LoginScreenState extends State<LoginScreen>
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(16),
                                   borderSide: BorderSide(
-                                    color: Colors.deepPurple.shade400,
+                                    color: AppColors.matteBlue400,
                                     width: 2,
                                   ),
                                 ),
@@ -316,9 +317,9 @@ class _LoginScreenState extends State<LoginScreen>
                                       decoration: BoxDecoration(
                                         gradient: LinearGradient(
                                           colors: [
-                                            Colors.red.shade50,
-                                            Colors.red.shade100,
-                                          ],
+                                              Colors.red.shade50,
+                                              Colors.red.shade100,
+                                            ],
                                         ),
                                         borderRadius: BorderRadius.circular(12),
                                         border: Border.all(
@@ -374,7 +375,7 @@ class _LoginScreenState extends State<LoginScreen>
                                     borderRadius: BorderRadius.circular(16),
                                     boxShadow: [
                                       BoxShadow(
-                                        color: Colors.deepPurple.withOpacity(0.4),
+                                        color: AppColors.matteBlue.withOpacity(0.4),
                                         blurRadius: 12,
                                         offset: const Offset(0, 6),
                                       ),

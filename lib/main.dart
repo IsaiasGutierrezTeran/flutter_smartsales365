@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'services/auth_service.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
+import 'theme.dart';
 
 void main() {
   runApp(const SmartSalesApp());
@@ -116,7 +117,7 @@ class _SplashScreenState extends State<SplashScreen> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Colors.deepPurple.shade400, Colors.deepPurple.shade800],
+            colors: [AppColors.matteBlue400, AppColors.matteBlue700],
           ),
         ),
         child: Center(

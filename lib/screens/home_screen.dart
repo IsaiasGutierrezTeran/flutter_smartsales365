@@ -211,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   ),
                                   const SizedBox(height: 4),
                                   Text(
-                                    '${widget.user.nombreCompleto ?? 'Usuario'}',
+                                    widget.user.fullName,
                                     style: TextStyle(
                                       fontSize: 14,
                                       color: Colors.grey.shade600,
@@ -243,7 +243,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       _buildFeatureCard(
                         title: 'IA con Reconocimiento de Voz',
                         description: 'Consulta datos con comandos de voz',
-                        icon: Icons.mic_outline,
+                        icon: Icons.mic,
                         color: AppColors.matteBlue,
                         onTap: () {
                           Navigator.of(context).push(
